@@ -1,6 +1,8 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(true);
@@ -95,7 +97,10 @@ const Navbar = () => {
               </svg>
             </div>
             <div className="Navbar_main_rigth_login">
-              <button className="nav_login_btn">Login</button>
+              {/* <button className="nav_login_btn">Login</button> */}
+              <Stack direction="row">
+                <Button variant="contained" style={{fontSize:'12px' , width:'80px',height:'37px',backgroundColor:'#A8794D',borderRadius:'8px'}}>Login</Button>
+              </Stack>
             </div>
           </div>
         </div>
